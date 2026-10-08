@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bk8jgpmdqbih2"]
+
+[ext_resource type="Script" uid="uid://cd6ynnr0wknur" path="res://clue_object.gd" id="1_w2krf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mic76"]
+radius = 58.077534
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mic76"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+
+[node name="ClueObject" type="Node2D" unique_id=1975510816]
+script = ExtResource("1_w2krf")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1421427211]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1403646654]
+position = Vector2(1, 6)
+shape = SubResource("CircleShape2D_mic76")
+debug_color = Color(0.28309974, 0.61992323, 0.34769633, 0.41960785)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1718907732]
+process_material = SubResource("ParticleProcessMaterial_mic76")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
