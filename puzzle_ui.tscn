@@ -18,15 +18,19 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 6.0
+offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="PuzzlePanel" type="PanelContainer" parent="DimBackground/CenterContainer" unique_id=733858487]
-custom_minimum_size = Vector2(520, 360)
+custom_minimum_size = Vector2(960, 840)
 layout_mode = 2
 
 [node name="Content" type="VBoxContainer" parent="DimBackground/CenterContainer/PuzzlePanel" unique_id=873191740]
 layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
 
 [node name="Title" type="Label" parent="DimBackground/CenterContainer/PuzzlePanel/Content" unique_id=580916253]
 custom_minimum_size = Vector2(400, 0)

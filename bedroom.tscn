@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="5_o412v"]
 [ext_resource type="PackedScene" uid="uid://b2re21ybqiky7" path="res://ghost_vision.tscn" id="6_6d2g4"]
 [ext_resource type="PackedScene" uid="uid://bk8jgpmdqbih2" path="res://clue_object.tscn" id="7_j12bj"]
+[ext_resource type="Texture2D" uid="uid://bf7jih8huv86k" path="res://art/door.png" id="8_dhkfy"]
+[ext_resource type="Script" uid="uid://dpwybtt3hh67x" path="res://door.gd" id="8_iwj3i"]
 [ext_resource type="PackedScene" uid="uid://djf7keuxeyyoh" path="res://ui.tscn" id="9_4ken1"]
 [ext_resource type="PackedScene" uid="uid://qr46hasb8oob" path="res://puzzle_ui.tscn" id="10_m2b15"]
 
@@ -426,10 +428,47 @@ sources/0 = SubResource("TileSetAtlasSource_iw0c1")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kd8bc"]
 size = Vector2(138.55276, 283.99792)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_tw3v3"]
+a = Vector2(-1014, 101)
+b = Vector2(203, 101)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_m2b15"]
+a = Vector2(-890, 6)
+b = Vector2(327, 8)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_dhkfy"]
+a = Vector2(-14, -340)
+b = Vector2(-12, 141)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_iwj3i"]
+a = Vector2(173, 707)
+b = Vector2(175, 55)
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ui2oe"]
 bounce = 0.2
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwj3i"]
+size = Vector2(20, 126)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jsdaq"]
+size = Vector2(75, 158)
+
 [node name="Bedroom" type="Node2D" unique_id=1185810557]
+
+[node name="Background" type="CanvasLayer" parent="." unique_id=1530136866]
+layer = -1
+
+[node name="BlackBackground" type="ColorRect" parent="Background" unique_id=826389738]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -607.0
+offset_top = -378.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
 
 [node name="World" type="CanvasGroup" parent="." unique_id=1508815095]
 material = SubResource("ShaderMaterial_onrkg")
@@ -480,6 +519,26 @@ rotation = -1.5557468
 shape = SubResource("RectangleShape2D_kd8bc")
 
 [node name="Player" parent="World" unique_id=1572405853 instance=ExtResource("5_o412v")]
+position = Vector2(619, 337)
+
+[node name="RoomBoundaries" type="StaticBody2D" parent="World" unique_id=1600411069]
+position = Vector2(853, -101)
+
+[node name="TopWall" type="CollisionShape2D" parent="World/RoomBoundaries" unique_id=190521701]
+position = Vector2(175, -5)
+shape = SubResource("SegmentShape2D_tw3v3")
+
+[node name="BottomWall" type="CollisionShape2D" parent="World/RoomBoundaries" unique_id=1494914929]
+position = Vector2(45, 752)
+shape = SubResource("SegmentShape2D_m2b15")
+
+[node name="LeftWall" type="CollisionShape2D" parent="World/RoomBoundaries" unique_id=1077097010]
+position = Vector2(-840, 442)
+shape = SubResource("SegmentShape2D_dhkfy")
+
+[node name="RightWall" type="CollisionShape2D" parent="World/RoomBoundaries" unique_id=288946376]
+position = Vector2(201, 49)
+shape = SubResource("SegmentShape2D_iwj3i")
 
 [node name="ClueObjects" type="Node2D" parent="." unique_id=12520825]
 
@@ -488,13 +547,37 @@ position = Vector2(794, 522.99994)
 scale = Vector2(0.059460595, 0.13522395)
 
 [node name="Door" type="StaticBody2D" parent="." unique_id=1397144151]
-position = Vector2(5, 549)
+position = Vector2(15, 619)
 physics_material_override = SubResource("PhysicsMaterial_ui2oe")
+script = ExtResource("8_iwj3i")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Door" unique_id=155933831]
+position = Vector2(0, -23.499996)
+scale = Vector2(0.27906978, 0.5037878)
+texture = ExtResource("8_dhkfy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=184406473]
+position = Vector2(0, -25)
+shape = SubResource("RectangleShape2D_iwj3i")
+debug_color = Color(0.5098907, 0.45008326, 0.9350613, 0.41960785)
+
+[node name="InteractionArea" type="Area2D" parent="Door" unique_id=424637752]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door/InteractionArea" unique_id=2046137527]
+position = Vector2(21.5, -44)
+shape = SubResource("RectangleShape2D_jsdaq")
+debug_color = Color(0.87845, 0.2921887, 0.46096027, 0.41960785)
 
 [node name="GhostVision" parent="." unique_id=1856865992 instance=ExtResource("6_6d2g4")]
 
 [node name="ColorRect" parent="GhostVision" index="0" unique_id=1797916957 node_paths=PackedStringArray("world")]
+offset_left = -651.0
+offset_top = -284.0
+offset_right = -252.0
+offset_bottom = 134.0
 world = NodePath("../../World")
+metadata/_edit_lock_ = true
 
 [node name="UI" parent="." unique_id=17427004 instance=ExtResource("9_4ken1")]
 
