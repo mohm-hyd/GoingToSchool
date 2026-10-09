@@ -24,7 +24,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="PuzzlePanel" type="PanelContainer" parent="DimBackground/CenterContainer" unique_id=733858487]
-custom_minimum_size = Vector2(960, 840)
+custom_minimum_size = Vector2(800, 800)
 layout_mode = 2
 
 [node name="Content" type="VBoxContainer" parent="DimBackground/CenterContainer/PuzzlePanel" unique_id=873191740]
@@ -33,20 +33,24 @@ theme_override_constants/separation = 16
 alignment = 1
 
 [node name="Title" type="Label" parent="DimBackground/CenterContainer/PuzzlePanel/Content" unique_id=580916253]
-custom_minimum_size = Vector2(400, 0)
+custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
-autowrap_mode = 2
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="Description" type="Label" parent="DimBackground/CenterContainer/PuzzlePanel/Content" unique_id=1792716381]
-custom_minimum_size = Vector2(400, 0)
+custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
-autowrap_mode = 2
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="SequenceDisplay" type="HBoxContainer" parent="DimBackground/CenterContainer/PuzzlePanel/Content" unique_id=719786513]
 layout_mode = 2
+alignment = 1
 
 [node name="SymbolButtons" type="GridContainer" parent="DimBackground/CenterContainer/PuzzlePanel/Content" unique_id=472452166]
 layout_mode = 2
+size_flags_horizontal = 4
 columns = 2
 
 [node name="PuzzleContent" type="Control" parent="DimBackground/CenterContainer/PuzzlePanel/Content" unique_id=1419113700]

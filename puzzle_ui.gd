@@ -63,7 +63,7 @@ func build_symbol_buttons() -> void:
 	for symbol in symbols:
 		var button := Button.new()
 		button.text = symbol
-		button.custom_minimum_size = Vector2(100, 70)
+		button.custom_minimum_size = Vector2(400, 200)
 		button.pressed.connect(_on_symbol_pressed.bind(symbol))
 		symbol_buttons.add_child(button)
 
@@ -102,7 +102,7 @@ func update_sequence_display() -> void:
 
 	for i in range(correct_sequence.size()):
 		var slot := Label.new()
-		slot.custom_minimum_size = Vector2(42, 42)
+		slot.custom_minimum_size = Vector2(100, 100)
 		slot.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		slot.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 
