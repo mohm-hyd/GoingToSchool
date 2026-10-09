@@ -25,3 +25,7 @@ func _physics_process(delta: float) -> void:
 	velocity = direction * 600.
 	move_and_slide()
 	
+	if velocity.length() > 0.0:
+		%Aspen.play_walk_animation()
+	else: 
+		%Aspen.play_idle_animation()
