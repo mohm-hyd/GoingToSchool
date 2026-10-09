@@ -1,15 +1,12 @@
-[gd_scene format=4 uid="uid://d1wycq0ylykwr"]
+[gd_scene format=3 uid="uid://d1wycq0ylykwr"]
 
 [ext_resource type="Shader" uid="uid://llw0dh4vxrud" path="res://bedroom.gdshader" id="1_885xx"]
-[ext_resource type="Texture2D" uid="uid://byx8503ingo0v" path="res://art/woodFloor.png" id="1_iw0c1"]
-[ext_resource type="Texture2D" uid="uid://bch3jfcjbxu40" path="res://art/bed.png" id="2_ui2oe"]
-[ext_resource type="Texture2D" uid="uid://drlwiuhvdotb2" path="res://art/desk.jpg" id="3_o412v"]
-[ext_resource type="Texture2D" uid="uid://dm4v1fx7ir4ns" path="res://art/wardrobe.png" id="4_6d2g4"]
+[ext_resource type="Texture2D" uid="uid://cosur5m6gdilc" path="res://art/bedroomfloor.png" id="2_iwj3i"]
+[ext_resource type="Texture2D" uid="uid://dgr0j7fojdh1b" path="res://art/desk_open.png" id="3_m2b15"]
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="5_o412v"]
 [ext_resource type="PackedScene" uid="uid://b2re21ybqiky7" path="res://ghost_vision.tscn" id="6_6d2g4"]
 [ext_resource type="PackedScene" uid="uid://d1ym4pgqtsb30" path="res://safe_clue_object.tscn" id="7_jsdaq"]
 [ext_resource type="PackedScene" uid="uid://dj3l05ugnaism" path="res://note_clue_object.tscn" id="7_w5t4u"]
-[ext_resource type="Texture2D" uid="uid://bf7jih8huv86k" path="res://art/door.png" id="8_dhkfy"]
 [ext_resource type="Script" uid="uid://dpwybtt3hh67x" path="res://door.gd" id="8_iwj3i"]
 [ext_resource type="PackedScene" uid="uid://djf7keuxeyyoh" path="res://ui.tscn" id="9_4ken1"]
 [ext_resource type="PackedScene" uid="uid://qr46hasb8oob" path="res://puzzle_ui.tscn" id="10_m2b15"]
@@ -18,441 +15,37 @@
 shader = ExtResource("1_885xx")
 shader_parameter/fade_amount = 0.0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iw0c1"]
-texture = ExtResource("1_iw0c1")
-texture_region_size = Vector2i(315, 315)
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-4:0/0 = 0
-5:0/0 = 0
-6:0/0 = 0
-7:0/0 = 0
-8:0/0 = 0
-9:0/0 = 0
-10:0/0 = 0
-11:0/0 = 0
-12:0/0 = 0
-13:0/0 = 0
-14:0/0 = 0
-15:0/0 = 0
-16:0/0 = 0
-17:0/0 = 0
-18:0/0 = 0
-19:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-5:1/0 = 0
-6:1/0 = 0
-7:1/0 = 0
-8:1/0 = 0
-9:1/0 = 0
-10:1/0 = 0
-11:1/0 = 0
-12:1/0 = 0
-13:1/0 = 0
-14:1/0 = 0
-15:1/0 = 0
-16:1/0 = 0
-17:1/0 = 0
-18:1/0 = 0
-19:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-5:2/0 = 0
-6:2/0 = 0
-7:2/0 = 0
-8:2/0 = 0
-9:2/0 = 0
-10:2/0 = 0
-11:2/0 = 0
-12:2/0 = 0
-13:2/0 = 0
-14:2/0 = 0
-15:2/0 = 0
-16:2/0 = 0
-17:2/0 = 0
-18:2/0 = 0
-19:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-5:3/0 = 0
-6:3/0 = 0
-7:3/0 = 0
-8:3/0 = 0
-9:3/0 = 0
-10:3/0 = 0
-11:3/0 = 0
-12:3/0 = 0
-13:3/0 = 0
-14:3/0 = 0
-15:3/0 = 0
-16:3/0 = 0
-17:3/0 = 0
-18:3/0 = 0
-19:3/0 = 0
-0:4/0 = 0
-1:4/0 = 0
-2:4/0 = 0
-3:4/0 = 0
-4:4/0 = 0
-5:4/0 = 0
-6:4/0 = 0
-7:4/0 = 0
-8:4/0 = 0
-9:4/0 = 0
-10:4/0 = 0
-11:4/0 = 0
-12:4/0 = 0
-13:4/0 = 0
-14:4/0 = 0
-15:4/0 = 0
-16:4/0 = 0
-17:4/0 = 0
-18:4/0 = 0
-19:4/0 = 0
-0:5/0 = 0
-1:5/0 = 0
-2:5/0 = 0
-3:5/0 = 0
-4:5/0 = 0
-5:5/0 = 0
-6:5/0 = 0
-7:5/0 = 0
-8:5/0 = 0
-9:5/0 = 0
-10:5/0 = 0
-11:5/0 = 0
-12:5/0 = 0
-13:5/0 = 0
-14:5/0 = 0
-15:5/0 = 0
-16:5/0 = 0
-17:5/0 = 0
-18:5/0 = 0
-19:5/0 = 0
-0:6/0 = 0
-1:6/0 = 0
-2:6/0 = 0
-3:6/0 = 0
-4:6/0 = 0
-5:6/0 = 0
-6:6/0 = 0
-7:6/0 = 0
-8:6/0 = 0
-9:6/0 = 0
-10:6/0 = 0
-11:6/0 = 0
-12:6/0 = 0
-13:6/0 = 0
-14:6/0 = 0
-15:6/0 = 0
-16:6/0 = 0
-17:6/0 = 0
-18:6/0 = 0
-19:6/0 = 0
-0:7/0 = 0
-1:7/0 = 0
-2:7/0 = 0
-3:7/0 = 0
-4:7/0 = 0
-5:7/0 = 0
-6:7/0 = 0
-7:7/0 = 0
-8:7/0 = 0
-9:7/0 = 0
-10:7/0 = 0
-11:7/0 = 0
-12:7/0 = 0
-13:7/0 = 0
-14:7/0 = 0
-15:7/0 = 0
-16:7/0 = 0
-17:7/0 = 0
-18:7/0 = 0
-19:7/0 = 0
-0:8/0 = 0
-1:8/0 = 0
-2:8/0 = 0
-3:8/0 = 0
-4:8/0 = 0
-5:8/0 = 0
-6:8/0 = 0
-7:8/0 = 0
-8:8/0 = 0
-9:8/0 = 0
-10:8/0 = 0
-11:8/0 = 0
-12:8/0 = 0
-13:8/0 = 0
-14:8/0 = 0
-15:8/0 = 0
-16:8/0 = 0
-17:8/0 = 0
-18:8/0 = 0
-19:8/0 = 0
-0:9/0 = 0
-1:9/0 = 0
-2:9/0 = 0
-3:9/0 = 0
-4:9/0 = 0
-5:9/0 = 0
-6:9/0 = 0
-7:9/0 = 0
-8:9/0 = 0
-9:9/0 = 0
-10:9/0 = 0
-11:9/0 = 0
-12:9/0 = 0
-13:9/0 = 0
-14:9/0 = 0
-15:9/0 = 0
-16:9/0 = 0
-17:9/0 = 0
-18:9/0 = 0
-19:9/0 = 0
-0:10/0 = 0
-1:10/0 = 0
-2:10/0 = 0
-3:10/0 = 0
-4:10/0 = 0
-5:10/0 = 0
-6:10/0 = 0
-7:10/0 = 0
-8:10/0 = 0
-9:10/0 = 0
-10:10/0 = 0
-11:10/0 = 0
-12:10/0 = 0
-13:10/0 = 0
-14:10/0 = 0
-15:10/0 = 0
-16:10/0 = 0
-17:10/0 = 0
-18:10/0 = 0
-19:10/0 = 0
-0:11/0 = 0
-1:11/0 = 0
-2:11/0 = 0
-3:11/0 = 0
-4:11/0 = 0
-5:11/0 = 0
-6:11/0 = 0
-7:11/0 = 0
-8:11/0 = 0
-9:11/0 = 0
-10:11/0 = 0
-11:11/0 = 0
-12:11/0 = 0
-13:11/0 = 0
-14:11/0 = 0
-15:11/0 = 0
-16:11/0 = 0
-17:11/0 = 0
-18:11/0 = 0
-19:11/0 = 0
-0:12/0 = 0
-1:12/0 = 0
-2:12/0 = 0
-3:12/0 = 0
-4:12/0 = 0
-5:12/0 = 0
-6:12/0 = 0
-7:12/0 = 0
-8:12/0 = 0
-9:12/0 = 0
-10:12/0 = 0
-11:12/0 = 0
-12:12/0 = 0
-13:12/0 = 0
-14:12/0 = 0
-15:12/0 = 0
-16:12/0 = 0
-17:12/0 = 0
-18:12/0 = 0
-19:12/0 = 0
-0:13/0 = 0
-1:13/0 = 0
-2:13/0 = 0
-3:13/0 = 0
-4:13/0 = 0
-5:13/0 = 0
-6:13/0 = 0
-7:13/0 = 0
-8:13/0 = 0
-9:13/0 = 0
-10:13/0 = 0
-11:13/0 = 0
-12:13/0 = 0
-13:13/0 = 0
-14:13/0 = 0
-15:13/0 = 0
-16:13/0 = 0
-17:13/0 = 0
-18:13/0 = 0
-19:13/0 = 0
-0:14/0 = 0
-1:14/0 = 0
-2:14/0 = 0
-3:14/0 = 0
-4:14/0 = 0
-5:14/0 = 0
-6:14/0 = 0
-7:14/0 = 0
-8:14/0 = 0
-9:14/0 = 0
-10:14/0 = 0
-11:14/0 = 0
-12:14/0 = 0
-13:14/0 = 0
-14:14/0 = 0
-15:14/0 = 0
-16:14/0 = 0
-17:14/0 = 0
-18:14/0 = 0
-19:14/0 = 0
-0:15/0 = 0
-1:15/0 = 0
-2:15/0 = 0
-3:15/0 = 0
-4:15/0 = 0
-5:15/0 = 0
-6:15/0 = 0
-7:15/0 = 0
-8:15/0 = 0
-9:15/0 = 0
-10:15/0 = 0
-11:15/0 = 0
-12:15/0 = 0
-13:15/0 = 0
-14:15/0 = 0
-15:15/0 = 0
-16:15/0 = 0
-17:15/0 = 0
-18:15/0 = 0
-19:15/0 = 0
-0:16/0 = 0
-1:16/0 = 0
-2:16/0 = 0
-3:16/0 = 0
-4:16/0 = 0
-5:16/0 = 0
-6:16/0 = 0
-7:16/0 = 0
-8:16/0 = 0
-9:16/0 = 0
-10:16/0 = 0
-11:16/0 = 0
-12:16/0 = 0
-13:16/0 = 0
-14:16/0 = 0
-15:16/0 = 0
-16:16/0 = 0
-17:16/0 = 0
-18:16/0 = 0
-19:16/0 = 0
-0:17/0 = 0
-1:17/0 = 0
-2:17/0 = 0
-3:17/0 = 0
-4:17/0 = 0
-5:17/0 = 0
-6:17/0 = 0
-7:17/0 = 0
-8:17/0 = 0
-9:17/0 = 0
-10:17/0 = 0
-11:17/0 = 0
-12:17/0 = 0
-13:17/0 = 0
-14:17/0 = 0
-15:17/0 = 0
-16:17/0 = 0
-17:17/0 = 0
-18:17/0 = 0
-19:17/0 = 0
-0:18/0 = 0
-1:18/0 = 0
-2:18/0 = 0
-3:18/0 = 0
-4:18/0 = 0
-5:18/0 = 0
-6:18/0 = 0
-7:18/0 = 0
-8:18/0 = 0
-9:18/0 = 0
-10:18/0 = 0
-11:18/0 = 0
-12:18/0 = 0
-13:18/0 = 0
-14:18/0 = 0
-15:18/0 = 0
-16:18/0 = 0
-17:18/0 = 0
-18:18/0 = 0
-19:18/0 = 0
-0:19/0 = 0
-1:19/0 = 0
-2:19/0 = 0
-3:19/0 = 0
-4:19/0 = 0
-5:19/0 = 0
-6:19/0 = 0
-7:19/0 = 0
-8:19/0 = 0
-9:19/0 = 0
-10:19/0 = 0
-11:19/0 = 0
-12:19/0 = 0
-13:19/0 = 0
-14:19/0 = 0
-15:19/0 = 0
-16:19/0 = 0
-17:19/0 = 0
-18:19/0 = 0
-19:19/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_iw0c1"]
-tile_size = Vector2i(315, 315)
-sources/0 = SubResource("TileSetAtlasSource_iw0c1")
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kd8bc"]
-size = Vector2(138.55276, 283.99792)
+size = Vector2(195.62265, 275.64005)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_tw3v3"]
-a = Vector2(-1014, 101)
+a = Vector2(-1741, 107)
 b = Vector2(203, 101)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_m2b15"]
-a = Vector2(-890, 6)
+a = Vector2(-321, -4)
 b = Vector2(327, 8)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jsdaq"]
+a = Vector2(108, 703)
+b = Vector2(102, -386)
+
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_dhkfy"]
-a = Vector2(-14, -340)
-b = Vector2(-12, 141)
+a = Vector2(7, -758)
+b = Vector2(-728, -763)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_iwj3i"]
-a = Vector2(173, 707)
+a = Vector2(169, 1157)
 b = Vector2(175, 55)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ui2oe"]
 bounce = 0.2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iwj3i"]
-size = Vector2(20, 126)
+size = Vector2(71.2944, 519.76794)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jsdaq"]
-size = Vector2(75, 158)
+size = Vector2(142.38586, 539.7959)
 
 [node name="Bedroom" type="Node2D" unique_id=1185810557]
 
@@ -473,104 +66,99 @@ metadata/_edit_lock_ = true
 
 [node name="World" type="CanvasGroup" parent="." unique_id=1508815095]
 material = SubResource("ShaderMaterial_onrkg")
+position = Vector2(969, 539)
+metadata/_edit_group_ = true
 
-[node name="Floor" type="TileMapLayer" parent="World" unique_id=1028428313]
-scale = Vector2(0.3, 0.3)
-tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAADAAEAAAAAAAAAAAACAAEAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAFAAEAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAMAAAAAAAAAAAAEAAMAAAAAAAAAAAADAAMAAAAAAAAAAAACAAMAAAAAAAAAAAABAAMAAAAAAAAAAAAAAAMAAAAAAAAAAAAGAAAAAAAAAAAAAAAGAAEAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAADAAQAAAAAAAAAAAACAAQAAAAAAAAAAAABAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAAHAAAAAAAAAAAAAAAHAAEAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAQAAAAAAAAAAAAHAAUAAAAAAAAAAAAGAAUAAAAAAAAAAAAFAAUAAAAAAAAAAAAEAAUAAAAAAAAAAAADAAUAAAAAAAAAAAACAAUAAAAAAAAAAAABAAUAAAAAAAAAAAAAAAUAAAAAAAAAAAAIAAAAAAAAAAAAAAAIAAEAAAAAAAAAAAAIAAIAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAQAAAAAAAAAAAAIAAUAAAAAAAAAAAAJAAAAAAAAAAAAAAAJAAEAAAAAAAAAAAAJAAIAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAQAAAAAAAAAAAAJAAUAAAAAAAAAAAAJAAYAAAAAAAAAAAAKAAAAAAAAAAAAAAAKAAEAAAAAAAAAAAAKAAIAAAAAAAAAAAAKAAMAAAAAAAAAAAAKAAQAAAAAAAAAAAAKAAUAAAAAAAAAAAAKAAYAAAAAAAAAAAALAAAAAAAAAAAAAAALAAEAAAAAAAAAAAALAAIAAAAAAAAAAAALAAMAAAAAAAAAAAALAAQAAAAAAAAAAAALAAUAAAAAAAAAAAALAAYAAAAAAAAAAAAIAAYAAAAAAAAAAAAHAAYAAAAAAAAAAAAGAAYAAAAAAAAAAAAFAAYAAAAAAAAAAAAEAAYAAAAAAAAAAAADAAYAAAAAAAAAAAACAAYAAAAAAAAAAAABAAYAAAAAAAAAAAAAAAYAAAAAAAAAAAAMAAAAAAAAAAAAAAAMAAEAAAAAAAAAAAAMAAIAAAAAAAAAAAAMAAMAAAAAAAAAAAAMAAQAAAAAAAAAAAAMAAUAAAAAAAAAAAAMAAYAAAAAAAAAAAA=")
-tile_set = SubResource("TileSet_iw0c1")
+[node name="Floor" type="Sprite2D" parent="World" unique_id=731793379]
+texture = ExtResource("2_iwj3i")
 
 [node name="Furniture" type="Node2D" parent="World" unique_id=1290347875]
 position = Vector2(7, 11)
 
 [node name="Bed" type="StaticBody2D" parent="World/Furniture" unique_id=2011581691]
-position = Vector2(1083, 136)
+position = Vector2(-858, 11)
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="World/Furniture/Bed" unique_id=1720986765]
-texture = ExtResource("2_ui2oe")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Furniture/Bed" unique_id=697031282]
-position = Vector2(0.5, 2.6750336)
+position = Vector2(103, -181)
 shape = SubResource("RectangleShape2D_kd8bc")
 
 [node name="Desk" type="StaticBody2D" parent="World/Furniture" unique_id=161221675]
-position = Vector2(705, 552)
+position = Vector2(-678.99994, 139.99994)
+rotation = -1.5925779
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="World/Furniture/Desk" unique_id=1935777168]
 scale = Vector2(0.6989732, 0.54618275)
-texture = ExtResource("3_o412v")
+texture = ExtResource("3_m2b15")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Furniture/Desk" unique_id=1326723935]
-position = Vector2(-1, 25)
+position = Vector2(-241.71628, -192.04742)
 rotation = -1.5557468
 shape = SubResource("RectangleShape2D_kd8bc")
 
 [node name="Wardrobe" type="StaticBody2D" parent="World/Furniture" unique_id=955860692]
-position = Vector2(221, 72)
-metadata/_edit_group_ = true
-
-[node name="Sprite2D" type="Sprite2D" parent="World/Furniture/Wardrobe" unique_id=600226925]
-scale = Vector2(0.6989732, 0.54618275)
-texture = ExtResource("4_6d2g4")
+position = Vector2(160, -467)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Furniture/Wardrobe" unique_id=1850007148]
-position = Vector2(-0.49621582, 0.24664307)
+position = Vector2(16.486282, 8.133484)
 rotation = -1.5557468
 shape = SubResource("RectangleShape2D_kd8bc")
 
 [node name="Player" parent="World" unique_id=1572405853 instance=ExtResource("5_o412v")]
-position = Vector2(619, 337)
+position = Vector2(-30, 12)
 
 [node name="RoomBoundaries" type="StaticBody2D" parent="World" unique_id=1600411069]
 position = Vector2(853, -101)
 
 [node name="TopWall" type="CollisionShape2D" parent="World/RoomBoundaries" unique_id=190521701]
-position = Vector2(175, -5)
+position = Vector2(-98, -544)
 shape = SubResource("SegmentShape2D_tw3v3")
 
 [node name="BottomWall" type="CollisionShape2D" parent="World/RoomBoundaries" unique_id=1494914929]
-position = Vector2(45, 752)
+position = Vector2(-245, 655)
 shape = SubResource("SegmentShape2D_m2b15")
 
 [node name="LeftWall" type="CollisionShape2D" parent="World/RoomBoundaries" unique_id=1077097010]
-position = Vector2(-840, 442)
+position = Vector2(-1927, -47)
+shape = SubResource("SegmentShape2D_jsdaq")
+
+[node name="BottomWall2" type="CollisionShape2D" parent="World/RoomBoundaries" unique_id=848137746]
+position = Vector2(-1095, 1425)
 shape = SubResource("SegmentShape2D_dhkfy")
 
 [node name="RightWall" type="CollisionShape2D" parent="World/RoomBoundaries" unique_id=288946376]
-position = Vector2(201, 49)
+position = Vector2(-72, -490)
 shape = SubResource("SegmentShape2D_iwj3i")
 
 [node name="ClueObjects" type="Node2D" parent="." unique_id=12520825]
 
 [node name="Note" parent="ClueObjects" unique_id=1185403542 instance=ExtResource("7_w5t4u")]
-position = Vector2(814, 553)
+position = Vector2(132, 964)
 scale = Vector2(0.043, 0.05)
 
 [node name="Safe" parent="ClueObjects" unique_id=1301034906 instance=ExtResource("7_jsdaq")]
-position = Vector2(486, 94)
+position = Vector2(545, 90.00006)
 scale = Vector2(0.259, 0.3)
 
 [node name="Door" type="StaticBody2D" parent="." unique_id=1397144151]
-position = Vector2(15, 619)
+position = Vector2(792.0001, 1117)
+rotation = 1.5603999
 physics_material_override = SubResource("PhysicsMaterial_ui2oe")
 script = ExtResource("8_iwj3i")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Door" unique_id=155933831]
-position = Vector2(0, -23.499996)
-scale = Vector2(0.27906978, 0.5037878)
-texture = ExtResource("8_dhkfy")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=184406473]
-position = Vector2(0, -25)
+position = Vector2(25.647247, -221.88403)
+scale = Vector2(1.0000002, 1.0000002)
 shape = SubResource("RectangleShape2D_iwj3i")
 debug_color = Color(0.5098907, 0.45008326, 0.9350613, 0.41960785)
 
 [node name="InteractionArea" type="Area2D" parent="Door" unique_id=424637752]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door/InteractionArea" unique_id=2046137527]
-position = Vector2(21.5, -44)
+position = Vector2(-12.192902, -234.89803)
+scale = Vector2(1.0000004, 1.0000004)
 shape = SubResource("RectangleShape2D_jsdaq")
 debug_color = Color(0.87845, 0.2921887, 0.46096027, 0.41960785)
 

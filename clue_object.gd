@@ -2,9 +2,9 @@ extends Area2D
 
 @onready var highlight: Sprite2D = $Highlight
 
-@export var puzzle_id: String = "safe_sequence"
-@export var puzzle_title: String = "The Forgotten Code"
-@export_multiline var puzzle_description: String = "Enter the symbols in the order revealed by the clues."
+@export var puzzle_id: String = "note_sequence"
+@export var puzzle_title: String = "If you forget the code to the safe:"
+@export_multiline var puzzle_description: String = "Check the symbols on the bracelet"
 
 @export var available_symbols: Array[String] = ["☾", "★", "◉", "⚿"]
 @export var correct_sequence: Array[String] = ["☾", "◉", "★", "⚿"]
