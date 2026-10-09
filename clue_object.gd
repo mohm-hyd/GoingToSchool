@@ -2,6 +2,13 @@ extends Area2D
 
 @onready var highlight: Sprite2D = $Highlight
 
+@export var puzzle_id: String = "wardrobe_sequence"
+@export var puzzle_title: String = "The Forgotten Pattern"
+@export_multiline var puzzle_description: String = "Repeat the symbols in the order revealed by the clue."
+
+@export var available_symbols: Array[String] = ["☾", "★", "◉", "⚿"]
+@export var correct_sequence: Array[String] = ["☾", "◉", "★", "⚿"]
+
 var discovered := false
 var ghost_vision_active := false
 
@@ -42,4 +49,13 @@ func interact() -> void:
 	if not can_interact():
 		return
 
-	print("You inspect the clue.")
+	var puzzle_ui = get_tree().get_first_node_in_group("puzzle_ui")
+
+	if puzzle_ui:
+		puzzle_ui.open_puzzle(
+			puzzle_id,
+			puzzle_title,
+			puzzle_description,
+			available_symbols,
+			correct_sequence
+		)

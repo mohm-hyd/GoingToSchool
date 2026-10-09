@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b2re21ybqiky7" path="res://ghost_vision.tscn" id="6_6d2g4"]
 [ext_resource type="PackedScene" uid="uid://bk8jgpmdqbih2" path="res://clue_object.tscn" id="7_j12bj"]
 [ext_resource type="PackedScene" uid="uid://djf7keuxeyyoh" path="res://ui.tscn" id="9_4ken1"]
+[ext_resource type="PackedScene" uid="uid://qr46hasb8oob" path="res://puzzle_ui.tscn" id="10_m2b15"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_onrkg"]
 shader = ExtResource("1_885xx")
@@ -496,5 +497,7 @@ physics_material_override = SubResource("PhysicsMaterial_ui2oe")
 world = NodePath("../../World")
 
 [node name="UI" parent="." unique_id=17427004 instance=ExtResource("9_4ken1")]
+
+[node name="PuzzleUI" parent="." unique_id=1887719840 instance=ExtResource("10_m2b15")]
 
 [editable path="GhostVision"]
