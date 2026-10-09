@@ -7,7 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://dm4v1fx7ir4ns" path="res://art/wardrobe.png" id="4_6d2g4"]
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="5_o412v"]
 [ext_resource type="PackedScene" uid="uid://b2re21ybqiky7" path="res://ghost_vision.tscn" id="6_6d2g4"]
-[ext_resource type="PackedScene" uid="uid://bk8jgpmdqbih2" path="res://clue_object.tscn" id="7_j12bj"]
+[ext_resource type="PackedScene" uid="uid://d1ym4pgqtsb30" path="res://safe_clue_object.tscn" id="7_jsdaq"]
+[ext_resource type="PackedScene" uid="uid://dj3l05ugnaism" path="res://note_clue_object.tscn" id="7_w5t4u"]
 [ext_resource type="Texture2D" uid="uid://bf7jih8huv86k" path="res://art/door.png" id="8_dhkfy"]
 [ext_resource type="Script" uid="uid://dpwybtt3hh67x" path="res://door.gd" id="8_iwj3i"]
 [ext_resource type="PackedScene" uid="uid://djf7keuxeyyoh" path="res://ui.tscn" id="9_4ken1"]
@@ -542,9 +543,13 @@ shape = SubResource("SegmentShape2D_iwj3i")
 
 [node name="ClueObjects" type="Node2D" parent="." unique_id=12520825]
 
-[node name="Note" parent="ClueObjects" unique_id=1185403542 instance=ExtResource("7_j12bj")]
-position = Vector2(794, 522.99994)
-scale = Vector2(0.059460595, 0.13522395)
+[node name="Note" parent="ClueObjects" unique_id=1185403542 instance=ExtResource("7_w5t4u")]
+position = Vector2(814, 553)
+scale = Vector2(0.043, 0.05)
+
+[node name="Safe" parent="ClueObjects" unique_id=1301034906 instance=ExtResource("7_jsdaq")]
+position = Vector2(486, 94)
+scale = Vector2(0.259, 0.3)
 
 [node name="Door" type="StaticBody2D" parent="." unique_id=1397144151]
 position = Vector2(15, 619)
@@ -580,6 +585,7 @@ world = NodePath("../../World")
 metadata/_edit_lock_ = true
 
 [node name="UI" parent="." unique_id=17427004 instance=ExtResource("9_4ken1")]
+metadata/_edit_lock_ = true
 
 [node name="PuzzleUI" parent="." unique_id=1887719840 instance=ExtResource("10_m2b15")]
 

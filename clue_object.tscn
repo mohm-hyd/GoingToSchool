@@ -8,7 +8,7 @@
 radius = 771.3279
 height = 1704.3857
 
-[node name="ClueObject" type="Area2D" unique_id=1185403542]
+[node name="BaseClueObject" type="Area2D" unique_id=1185403542]
 scale = Vector2(0.14963612, 0.1737401)
 script = ExtResource("1_2ohoc")
 metadata/_edit_group_ = true
