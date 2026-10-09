@@ -1,11 +1,18 @@
 [gd_scene format=4 uid="uid://d1wycq0ylykwr"]
 
+[ext_resource type="Shader" uid="uid://llw0dh4vxrud" path="res://bedroom.gdshader" id="1_885xx"]
 [ext_resource type="Texture2D" uid="uid://byx8503ingo0v" path="res://art/woodFloor.png" id="1_iw0c1"]
 [ext_resource type="Texture2D" uid="uid://bch3jfcjbxu40" path="res://art/bed.png" id="2_ui2oe"]
 [ext_resource type="Texture2D" uid="uid://drlwiuhvdotb2" path="res://art/desk.jpg" id="3_o412v"]
 [ext_resource type="Texture2D" uid="uid://dm4v1fx7ir4ns" path="res://art/wardrobe.png" id="4_6d2g4"]
 [ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="5_o412v"]
 [ext_resource type="PackedScene" uid="uid://b2re21ybqiky7" path="res://ghost_vision.tscn" id="6_6d2g4"]
+[ext_resource type="PackedScene" uid="uid://bk8jgpmdqbih2" path="res://clue_object.tscn" id="7_j12bj"]
+[ext_resource type="PackedScene" uid="uid://djf7keuxeyyoh" path="res://ui.tscn" id="9_4ken1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_onrkg"]
+shader = ExtResource("1_885xx")
+shader_parameter/fade_amount = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iw0c1"]
 texture = ExtResource("1_iw0c1")
@@ -424,6 +431,7 @@ bounce = 0.2
 [node name="Bedroom" type="Node2D" unique_id=1185810557]
 
 [node name="World" type="CanvasGroup" parent="." unique_id=1508815095]
+material = SubResource("ShaderMaterial_onrkg")
 
 [node name="Floor" type="TileMapLayer" parent="World" unique_id=1028428313]
 scale = Vector2(0.3, 0.3)
@@ -472,18 +480,21 @@ shape = SubResource("RectangleShape2D_kd8bc")
 
 [node name="Player" parent="World" unique_id=1572405853 instance=ExtResource("5_o412v")]
 
-[node name="ClueObjects" type="Node2D" parent="." unique_id=1271287648]
+[node name="ClueObjects" type="Node2D" parent="." unique_id=12520825]
 
-[node name="DeskNote" type="Area2D" parent="ClueObjects" unique_id=1525439476]
-
-[node name="Sprite2D" type="Sprite2D" parent="ClueObjects/DeskNote" unique_id=1134922796]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ClueObjects/DeskNote" unique_id=437786869]
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="ClueObjects/DeskNote" unique_id=1835746799]
+[node name="Note" parent="ClueObjects" unique_id=1185403542 instance=ExtResource("7_j12bj")]
+position = Vector2(794, 522.99994)
+scale = Vector2(0.059460595, 0.13522395)
 
 [node name="Door" type="StaticBody2D" parent="." unique_id=1397144151]
 position = Vector2(5, 549)
 physics_material_override = SubResource("PhysicsMaterial_ui2oe")
 
 [node name="GhostVision" parent="." unique_id=1856865992 instance=ExtResource("6_6d2g4")]
+
+[node name="ColorRect" parent="GhostVision" index="0" unique_id=1797916957 node_paths=PackedStringArray("world")]
+world = NodePath("../../World")
+
+[node name="UI" parent="." unique_id=17427004 instance=ExtResource("9_4ken1")]
+
+[editable path="GhostVision"]

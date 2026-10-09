@@ -7,3 +7,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="InteractionPrompt" type="Label" parent="." unique_id=2070763363]
+visible = false
+layout_mode = 0
+offset_left = 545.0
+offset_top = 324.0
+offset_right = 680.0
+offset_bottom = 347.0
+text = "Press E to inspect"
